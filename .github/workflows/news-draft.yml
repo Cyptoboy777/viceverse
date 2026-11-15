@@ -1,0 +1,33 @@
+name: News draft helper
+# Manual only: run it when you find articles worth covering. It opens an Issue with DRAFTS for you to review.
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Article links, one per line (max 5, https only)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Create drafts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          URLS: ${{ inputs.urls }}
+        run: node tools/digest.js > drafts.md
+      - name: Open review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "News drafts to review ($(date +%F))" --body-file drafts.md

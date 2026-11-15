@@ -1,0 +1,5 @@
+[
+  { "name": "Xbox Wire", "url": "https://news.xbox.com/en-us/feed/", "official": true },
+  { "name": "PlayStation Blog", "url": "https://blog.playstation.com/feed/", "official": true },
+  { "name": "Google News", "url": "https://news.google.com/rss/search?q=%22GTA+6%22+OR+%22Grand+Theft+Auto+VI%22+when%3A2d&hl=en-US&gl=US&ceid=US%3Aen", "official": false }
+]

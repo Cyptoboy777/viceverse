@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "VICEVERSE | The World of Leonida",
+  "short_name": "VICEVERSE",
+  "description": "Independent fan-made hub for the world of Leonida: map, vehicles, characters and verified news.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07060f",
+  "theme_color": "#07060f",
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Discovery map", "url": "./index.html#map" },
+    { "name": "News & rumours", "url": "./index.html#news" },
+    { "name": "My tracker", "url": "./index.html#tracker" }
+  ]
+}
