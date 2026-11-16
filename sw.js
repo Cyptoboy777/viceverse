@@ -1,5 +1,5 @@
 /* VICEVERSE service worker. Bump VERSION whenever any file changes. */
-const VERSION = "v1.5.0";
+const VERSION = "v1.5.1";
 const CACHE = "viceverse-" + VERSION;
 const ASSETS = [
   "./",
