@@ -35,6 +35,7 @@ async function run({ env = process.env, root = path.join(__dirname, ".."), now =
   const file = path.join(root, "news-auto.json"), seenFile = path.join(root, "state/seen.json");
   const store = readJson(file, { items: [] }), seen = new Set(readJson(seenFile, []));
   const items = Array.isArray(store.items) ? store.items : [];
+  const items0 = JSON.parse(JSON.stringify(items)).sort((a, b) => (a.date < b.date ? 1 : -1));
   const queue = [], log = [];
   let made = 0;
 
@@ -67,7 +68,9 @@ async function run({ env = process.env, root = path.join(__dirname, ".."), now =
 
   const uniq = []; const ids = new Set();
   items.sort((a, b) => (a.date < b.date ? 1 : -1)).forEach((x) => { if (!ids.has(x.id)) { ids.add(x.id); uniq.push(x); } });
-  fs.writeFileSync(file, JSON.stringify({ updated: new Date(now).toISOString(), items: uniq.slice(0, MAX_ITEMS) }, null, 2) + "\n");
+  const next = uniq.slice(0, MAX_ITEMS);
+  if (JSON.stringify(next) !== JSON.stringify(items0)) // only touch the file when something changed
+    fs.writeFileSync(file, JSON.stringify({ updated: new Date(now).toISOString(), items: next }, null, 2) + "\n");
   fs.mkdirSync(path.dirname(seenFile), { recursive: true });
   fs.writeFileSync(seenFile, JSON.stringify([...seen].slice(-600), null, 1) + "\n");
   const rq = path.join(root, "review-queue.md");
