@@ -3,6 +3,9 @@
   "use strict";
   var c = window.VV_CONFIG || {};
   if (!/^ca-pub-\d+$/.test(c.adsenseClient || "")) return;
+  // Before approval there are no slot IDs: show no banner and no ad boxes. (The head script is only for AdSense site verification.)
+  var hasSlots = Object.keys(c.adSlots || {}).some(function (k) { return c.adSlots[k]; });
+  if (!hasSlots) return;
 
   var KEY = "vv-consent", loaded = false, personalised = false;
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
@@ -21,7 +24,7 @@
     var s = document.createElement("script");
     s.async = true; s.crossOrigin = "anonymous";
     s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + c.adsenseClient;
-    document.head.appendChild(s);
+    if (!document.querySelector('script[src*="adsbygoogle.js"]')) document.head.appendChild(s);
   }
 
   // Only fill slots that are actually visible (a hidden SPA page has width 0, which AdSense rejects).

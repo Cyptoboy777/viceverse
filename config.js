@@ -6,7 +6,7 @@ window.VV_CONFIG = {
   /* Automatic news. After you create your GitHub repo, set this to:
      https://raw.githubusercontent.com/YOUR-GITHUB-USERNAME/YOUR-REPO/main/news-auto.json */
   newsFeedUrl: "https://raw.githubusercontent.com/Cyptoboy777/viceverse/main/news-auto.json",
-  adsenseClient: "",
+  adsenseClient: "ca-pub-6915700686027349",
   adSlots: {
     "home-mid": "",
     "home-bottom": "",

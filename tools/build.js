@@ -185,6 +185,7 @@ function shell({ title, desc, file, depth = 0, body, on = "", article = null, sc
   <link rel="icon" href="${r}assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="${r}assets/icon-192.png">
   <link rel="stylesheet" href="${r}styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6915700686027349" crossorigin="anonymous"></script>
   ${ld}
 </head>
 <body class="static" data-root="${r}">
