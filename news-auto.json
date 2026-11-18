@@ -1,4 +1,15 @@
 {
-  "updated": "2026-11-15T20:02:25.104Z",
-  "items": []
+  "updated": "2026-11-18T23:08:32.365Z",
+  "items": [
+    {
+      "id": "a-7fqvjw",
+      "kind": "confirmed",
+      "date": "2026-11-18T16:00:23.000Z",
+      "dateLabel": "18 Nov 2026",
+      "title": "Grand Theft Auto VI launches tomorrow, November 19",
+      "body": "Grand Theft Auto VI is scheduled to release on November 19. The game is set in the state of Leonida, featuring Vice City and other regions. Players will follow protagonists Jason and Lucia through a criminal conspiracy. The title promises an immersive experience with extensive radio and podcast options.",
+      "source": "PlayStation Blog",
+      "url": "https://blog.playstation.com/2026/11/18/grand-theft-auto-vi-launches-tomorrow-november-19/"
+    }
+  ]
 }
