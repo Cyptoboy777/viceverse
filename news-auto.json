@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-20T22:49:23.642Z",
+  "updated": "2026-11-24T03:03:27.795Z",
   "items": [
+    {
+      "id": "a-1dhua8q",
+      "kind": "confirmed",
+      "date": "2026-11-23T23:30:13.000Z",
+      "dateLabel": "23 Nov 2026",
+      "title": "Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history",
+      "body": "Grand Theft Auto VI has become PlayStation's biggest launch ever, setting new records for concurrent players. Over 39 million unique PS5 players experienced the game, logging 683 million hours. This success highlights strong community engagement and marks a historic moment for gaming, according to Sony Interactive Entertainment.",
+      "source": "PlayStation Blog",
+      "url": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/"
+    },
+    {
+      "id": "a-12yi6pm",
+      "kind": "confirmed",
+      "date": "2026-11-23T21:36:20.000Z",
+      "dateLabel": "23 Nov 2026",
+      "title": "How to Play Grand Theft Auto VI in the Cloud and with Remote Play",
+      "body": "Xbox Wire announced that Grand Theft Auto VI supports Xbox Cloud Gaming and Remote Play. Players can stream the game to various devices, including Xbox consoles, mobile phones, and PCs, even without a current-gen console for cloud play. Cloud streaming uses Xbox Series S graphics settings. Remote Play streams directly from a user's Xbox Series X|S. A copy of the game is required.",
+      "source": "Xbox Wire",
+      "url": "https://news.xbox.com/en-us/2026/11/23/grand-theft-auto-vi-xbox-cloud-and-remote-play/"
+    },
     {
       "id": "a-rwibx",
       "kind": "confirmed",
